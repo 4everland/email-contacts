@@ -2,21 +2,21 @@ import { configure } from 'log4js';
 import * as path from 'path';
 const basePath = path.resolve(__dirname, "../../logs");
 
-let log4 = configure({
+const log4 = configure({
 	appenders: {
 		info: {
 			type: "dateFile",
 			filename: basePath + '/info',
 			alwaysIncludePattern: true,
 			pattern: "yyyy-MM-dd.log",
-			daysToKeep: 10
+			daysToKeep: 7
 		},
 		error: {
 			type: 'dateFile',
 			filename: basePath + '/error',
 			alwaysIncludePattern: true,
 			pattern: "yyyy-MM-dd.log",
-			daysToKeep: 10
+			daysToKeep: 7
 		}
 	},
 	categories: {

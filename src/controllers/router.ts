@@ -7,7 +7,7 @@ router.post("/contacts/email", async (ctx) => {
 	const res = await service.createContract(email)
 	ctx.body = {
 		code: 200,
-		msg: res
+		message: res
 	}
 });
 
