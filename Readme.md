@@ -8,7 +8,7 @@
 
 | params | type   |
 | ------ | ------ |
-| Email  | String |
+| email  | String |
 
 `return`
 
