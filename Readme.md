@@ -12,4 +12,9 @@
 
 `return`
 
-always success
+| code | message        |
+| ---- | -------------- |
+| 200  | OK             |
+| 400  | Bad request    |
+| 500  | Internal error |
+
