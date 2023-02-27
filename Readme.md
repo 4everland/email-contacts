@@ -4,6 +4,8 @@
 
 `path /contacts/email`
 
+`method POST`
+
 | params | type   |
 | ------ | ------ |
 | Email  | String |
