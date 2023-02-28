@@ -6,14 +6,13 @@ export const httpErrorMiddleware = async (ctx: Koa.ParameterizedContext<any, {}>
 	try {
 		await next()
 	} catch (err) {
+		ctx.status = 200
 		if (err instanceof HttpError) {
-			ctx.status = err.statusCode
 			ctx.body = {
 				code: err.code || err.statusCode,
 				message: err.message
 			}
 		} else {
-			ctx.status = StatusCode.InternalError
 			ctx.body = {
 				code: 500,
 				message: err.toString()
